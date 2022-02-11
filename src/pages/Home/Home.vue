@@ -19,6 +19,16 @@
         unelevated
         color="primary"
         />
+        <div>
+        <q-btn
+        to="/questions/answers"
+        label="go to another section"
+        class="full-width q-mb-md"
+        rounded
+        unelevated
+        color="primary"
+        />
+        </div>
 
         <p v-for="n in 20" :key="n">
         Our new content.
