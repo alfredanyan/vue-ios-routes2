@@ -3,7 +3,8 @@
     class="page-header q-header q-layout__section--marginal fixed-top q-header--bordered bg-white text-dark"
   >
     <div class="q-toolbar row no-wrap items-center">
-      <div class="q-toolbar__title ellipsis text-center">
+      <slot name="buttons-left" />
+      <div class="page-header-title q-pl-none q-toolbar__title ellipsis text-body1">
         <slot name="title" />
       </div>
     </div>

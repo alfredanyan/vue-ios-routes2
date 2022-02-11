@@ -1,5 +1,5 @@
 <template>
-  <div class="page absolute-top fit bg-white">
+  <div class="page absolute-top fit bg-white shadow-4">
     <slot />
       <router-view v-slot="{ Component }">
         <transition

@@ -1,5 +1,18 @@
+//layout
+.q-footer {
+    z-index: 3000;
+}
+
 //page
 .page {
+    &-header {
+        &-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 12px;
+        }
+    }
     &-body {
         &-spacer {
             &-header {

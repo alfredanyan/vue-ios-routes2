@@ -1,6 +1,12 @@
 <template>
   <page>
     <page-header>
+      <template #buttons-left>
+        <page-header-back-btn
+        to="/home"
+        label="Home"
+        />
+      </template>
       <template #title>
         Our Child App
       </template>
