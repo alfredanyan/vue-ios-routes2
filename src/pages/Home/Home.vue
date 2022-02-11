@@ -8,6 +8,9 @@
     <page-body>
       <template #content>
 
+        <div class="text-h5 q-mb-md">
+          Creating IOS app
+        </div>
         <q-btn
         to="/home/child"
         label="go to child"
@@ -19,8 +22,9 @@
 
         <p v-for="n in 20" :key="n">
         Our new content.
+        Our new content.
         </p>
-        
+
       </template>
     </page-body>
   </page>

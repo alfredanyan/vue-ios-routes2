@@ -11,12 +11,29 @@ const routes = [
         children: [
           {
             path: '/home/child',
-            component: () => import('src/pages/Home/Child.vue')
+            component: () => import('src/pages/Home/Child.vue'),
+            children: [
+              {
+                path: '/home/child/grandchild',
+                component: () => import('src/pages/Home/Grandchild.vue')
+              }
+            ]
           }
         ]
       }
     ]
   },
+  {
+    path: '/questions',
+    component: () => import('src/pages/Questions/Questions.vue'),
+    children: [
+      {
+        path: '/questions/answers',
+        component: () => import('src/pages/Questions/Answers.vue'),
+      }
+    ]
+  },
+  
   // Always leave this as last one,
   // but you can also remove it
   {
