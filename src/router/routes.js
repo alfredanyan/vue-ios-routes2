@@ -34,6 +34,12 @@ const routes = [
       {
         path: '/images',
         component: () => import('src/pages/Images/Images.vue'),
+        children: [
+          {
+            path: '/images/:id',
+            component: () => import('src/pages/Images/Image.vue'),
+          }
+        ]
       }
     ]
   },

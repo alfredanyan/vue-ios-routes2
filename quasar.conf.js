@@ -103,6 +103,8 @@ module.exports = configure(function (ctx) {
     animations: [
       'slideInRight',
       'slideOutRight',
+      'fadeIn',
+      'fadeOut'
     ],
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr

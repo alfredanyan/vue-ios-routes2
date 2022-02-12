@@ -54,9 +54,15 @@ const state = reactive({
     ],
     usePageTransition: false
 })
+const getters = {
+    getImage(imageId) { 
+        return state.images.filter(image => image.id === imageId)[0]
+    }
 
+}
 const store = {
-    state
+    state,
+    getters
 }
 
 export default store
