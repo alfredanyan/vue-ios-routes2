@@ -1,6 +1,9 @@
 <template>
   <div class="page absolute-top fit bg-white shadow-4">
-    <div class="page-nudger fit" :class="{ 'nudge-left': hasActiveChildPage }">
+    <div
+    v-touch-swipe.mouse.right="useGoBack"
+    class="page-nudger fit"
+     :class="{ 'nudge-left': hasActiveChildPage }">
       <slot />
     </div>
     <router-view v-slot="{ Component }">
@@ -24,6 +27,7 @@
 <script>
 import { ref, onActivated, onDeactivated } from "vue";
 import store from 'src/myStore'
+import useGoBack from 'src/use/useGoBack'
 
 export default {
   name: "Page",
@@ -40,6 +44,7 @@ export default {
 
     return {
       store,
+      useGoBack,
       hasActiveChildPage,
     };
   },

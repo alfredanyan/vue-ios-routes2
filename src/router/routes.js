@@ -30,6 +30,10 @@ const routes = [
             component: () => import('src/pages/Questions/Answers.vue'),
           }
         ]
+      },
+      {
+        path: '/images',
+        component: () => import('src/pages/Images/Images.vue'),
       }
     ]
   },
