@@ -13,26 +13,7 @@
             bottom: 12px;
         }
     }
-    &-nudger {
-        transition: transform 0.4s;
-        &::after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0);
-            z-index: 2000;
-            pointer-events: none;
-            transition: background 0.4s;
-
-        }
-        &.nudge-left {
-            transform: translateX(-60px);
-            &::after {
-                background: rgba(0,0,0,0.15);
-            }
-        }
-    }
+    
     &-body {
         &-spacer {
             &-header {
@@ -43,6 +24,28 @@
             }
         }
     }
+}
+.q-layout:not(.ios-browser-swiping-back) {
+    .page-nudger {
+        transition: transform 0.4s;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0);
+            z-index: 2000;
+            pointer-events: none;
+            transition: background 0.4s;
+    
+        }
+        &.nudge-left {
+            transform: translateX(-60px);
+            &::after {
+                background: rgba(0,0,0,0.15);
+            }
+        }
+    } 
 }
 
 // transitions

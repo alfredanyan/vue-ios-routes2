@@ -7,12 +7,12 @@
     >
       <slot />
     </div>
-    <router-view v-slot="{ Component }">
+    <router-view v-slot="{ Component }"> 
       <transition
         appear
         enter-active-class="animated slideInRight"
         leave-active-class="animated slideOutRight"
-        :css="store.state.usePageTransition && !store.state.iosBrowserSwipingBack"
+        :css="store.state.usePageTransition && !store.state.iosBrowserSwipeBack"
       >
         <keep-alive>
           <component

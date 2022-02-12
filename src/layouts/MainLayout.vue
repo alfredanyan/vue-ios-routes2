@@ -1,5 +1,7 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf"
+  :class="{ 'ios-browser-swiping-back': store.state.iosBrowserSwipingBack }"
+  >
     <q-footer bordered class="bg-white text-primary">
       <q-tabs
         no-caps
