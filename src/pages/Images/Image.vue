@@ -14,13 +14,17 @@
           leave-active-class="animated fadeOut slower"
         >
           <div class="imageContainer" v-if="image">
-            <q-img :src="image.url" no-transition no-spinner />
+            <q-img
+            class="no-pointer-events"
+            :src="image.url"
+            no-transition 
+            no-spinner />
             <div class="q-pa-lg">
               <div class="caption flex-center text-h5 q-mb-md">
                 {{ image.caption }}
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                Lorem dolor amet consectetur adipisicing elit. Magni
                 explicabo nulla, expedita quod quos quas? Blanditiis doloremque
                 dicta fuga harum culpa mollitia ducimus? Animi adipisci sit
                 sapiente dolor repellendus eaque!

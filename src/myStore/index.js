@@ -52,7 +52,8 @@ const state = reactive({
             caption: 'Alley Portugal'
         },
     ],
-    usePageTransition: false
+    usePageTransition: false,
+    iosBrowserSwipeBack: false
 })
 const getters = {
     getImage(imageId) { 
