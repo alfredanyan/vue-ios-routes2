@@ -20,19 +20,20 @@ const routes = [
             ]
           }
         ]
-      }
-    ]
-  },
-  {
-    path: '/questions',
-    component: () => import('src/pages/Questions/Questions.vue'),
-    children: [
+      },
       {
-        path: '/questions/answers',
-        component: () => import('src/pages/Questions/Answers.vue'),
+        path: '/questions',
+        component: () => import('src/pages/Questions/Questions.vue'),
+        children: [
+          {
+            path: '/questions/answers',
+            component: () => import('src/pages/Questions/Answers.vue'),
+          }
+        ]
       }
     ]
   },
+  
   
   // Always leave this as last one,
   // but you can also remove it

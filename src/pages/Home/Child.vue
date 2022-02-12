@@ -3,7 +3,6 @@
     <page-header>
       <template #buttons-left>
         <page-header-back-btn
-        to="/home"
         label="Home"
         />
       </template>

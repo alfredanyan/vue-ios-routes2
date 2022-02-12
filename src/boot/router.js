@@ -1,11 +1,14 @@
 import { boot } from 'quasar/wrappers'
 import store from 'src/myStore'
 
+//store router instance
+let routerInstance = null
+
 export default boot(({ router }) => {
+  routerInstance = router
   router.afterEach((to, from) => {
-    let fromRootPath = `/${to.path.split('/')[1]}`;
-    let toRootPath = `/${from.path.split('/')[1]}`;
-    console.log('toRootPath: ',toRootPath)
+    let toRootPath = `/${to.path.split('/')[1]}`;
+    let fromRootPath = `/${from.path.split('/')[1]}`;
 
     // navigated to a different 'section'
     if (fromRootPath !== toRootPath) {
@@ -16,6 +19,11 @@ export default boot(({ router }) => {
       //use page transition
       //same section navigated
       store.state.usePageTransition = true;
+      //allow go back to parent page within section but
+      //avoid loop of death
+      if (from.path === to.path && to.path !== toRootPath) {
+        router.push(toRootPath);
+      }
     }
     //update to property on nav item whenever we change route
     updateNavItem();
@@ -25,3 +33,5 @@ export default boot(({ router }) => {
     }
   })
 })
+
+export { routerInstance }
